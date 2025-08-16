@@ -15,3 +15,23 @@ class Circle {
 
 }
 const circle= new Circle(2,"red");
+
+//Creating a Promise
+
+const myPromise=  new Promise((resolve,reject)=>{
+    let success = true;
+     
+    setTimeout(()=>{
+        if(success){
+            resolve("Data Received Successfully");
+        }
+        else{
+            reject("Something ent Wrong");
+        }
+
+
+    },2000);
+   
+})
+
+//Using a Promise
