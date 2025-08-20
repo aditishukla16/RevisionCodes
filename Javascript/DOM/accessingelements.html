@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Revision</title>
+</head>
+<body>
+  <h1 id="title">Hello DOM</h1>
+  <p class="desc">This is a paragraph.</p>
+  <button>Click Me</button>
+  
+  <script>
+    // By ID
+    const heading = document.getElementById("title");
+    console.log(heading.innerText); // Hello DOM
+
+    // By Class
+    const para = document.getElementsByClassName("desc")[0];
+    console.log(para.innerText);
+
+    // By Tag
+    const btn = document.getElementsByTagName("button")[0];
+    console.log(btn.innerText);
+
+    // Modern (querySelector)
+    const h = document.querySelector("#title");
+    const p = document.querySelector(".desc");
+    console.log(h.innerText, p.innerText);
+  </script>
+</body>
+</html>
