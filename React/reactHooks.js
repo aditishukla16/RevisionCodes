@@ -16,3 +16,23 @@ const ToggleMessage = () => {
       </div>
   );
 };
+//useRef
+
+import React, { useRef } from "react";
+
+const InputFocus = () => {
+  const inputRef = useRef(null);
+
+  const handleFocus = () => {
+    inputRef.current.focus(); // directly accessing the DOM element
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" placeholder="Type here..." />
+      <button onClick={handleFocus}>Focus Input</button>
+    </div>
+  );
+};
+
+export default InputFocus;
